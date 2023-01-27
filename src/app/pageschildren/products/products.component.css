@@ -1,0 +1,9 @@
+.card-products{
+    margin: 0 0;
+
+}
+@media (max-width:1036px){
+    .card-products{
+        margin: 1% 0;
+    }
+}

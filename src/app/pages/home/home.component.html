@@ -1,0 +1,40 @@
+
+<mat-sidenav-container class="app-sidenav">
+
+    <mat-sidenav #sidenav mode="over" class="app-sidenav" color="primary">
+  
+        <mat-toolbar class="app-sidenav">
+          <mat-toolbar-row>
+            <span>Account</span>
+            <span class="app-toolbar-filler"></span>
+          </mat-toolbar-row>
+          <mat-toolbar-row>
+            <button mat-raised-button color="accent"  routerLink="/user" class="app-sidebar-button">
+              My Account
+            </button>
+          </mat-toolbar-row>
+          <mat-toolbar-row>
+            <span>Log out</span>
+            <span class="app-toolbar-filler"></span>
+          </mat-toolbar-row>
+          <mat-toolbar-row>
+            <button mat-raised-button color="warn" (click)="logout()" class="app-sidebar-button">
+              Close my account
+            </button>
+          </mat-toolbar-row>
+        </mat-toolbar>
+  
+      </mat-sidenav>
+      <mat-toolbar class="navbar" color="primary">
+        <button mat-button class="app-menu-button" (click)="sidenav.toggle()">
+          <i class="material-icons">menu</i>
+        </button>
+        <a mat-button class="Link" routerLink="/home/pictures">Pictures</a>
+        <a mat-button class="Link" routerLink="/home/postds">PosTds</a>
+        <a mat-button class="Link" routerLink="/home/products">Products</a>
+     
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</mat-sidenav-container>
+
+
